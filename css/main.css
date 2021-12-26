@@ -57,6 +57,7 @@ table {
 .first_site_background {
   background-color: #E4E4E4;
   width: 100%;
+  display: flex;
 }
 
 .site_container {
@@ -70,6 +71,7 @@ table {
 }
 
 header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -132,6 +134,47 @@ header {
   .main_menu {
     display: none;
   }
+}
+
+.hamburger_menu {
+  position: absolute;
+  content: " ";
+  left: 0;
+  top: 30px;
+}
+@media (min-width: 728px) and (max-width: 984px) {
+  .hamburger_menu {
+    display: none;
+  }
+}
+@media (min-width: 984px) {
+  .hamburger_menu {
+    display: none;
+  }
+}
+
+.custom_checkbox {
+  display: none;
+}
+
+.custom_checkbox + span {
+  height: 1px;
+  padding: 30px;
+  background-image: url("/images/hamburger-menu.svg");
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.custom_checkbox:checked + span {
+  height: 1px;
+  padding: 30px;
+  background-image: url("/images/icons8-close.svg");
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  background-repeat: no-repeat;
 }
 
 main {

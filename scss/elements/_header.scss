@@ -19,6 +19,7 @@
 .first_site_background {
   background-color: $color_background;
   width: 100%;
+  display: flex;
 }
 
 .site_container {
@@ -30,6 +31,7 @@
 }
 
 header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,4 +90,42 @@ header {
   @include mobile {
     display: none;
   }
+}
+
+.hamburger_menu {
+  position: absolute;
+  content: " ";
+  left: 0;
+  top: 30px;
+  @include tablet {
+    display: none;
+  }
+  @include  desktop {
+    display: none;
+  }
+}
+
+
+.custom_checkbox {
+  display: none;
+}
+
+.custom_checkbox + span {
+  height: 1px;
+  padding: 30px;
+  background-image: url("/images/hamburger-menu.svg");
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.custom_checkbox:checked + span {
+  height: 1px;
+  padding: 30px;
+  background-image: url("/images/icons8-close.svg");
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  background-repeat: no-repeat;
 }
