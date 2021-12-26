@@ -1,10 +1,32 @@
+@mixin mobile {
+  @media (max-width: 728px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 728px) and (max-width: 984px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 984px) {
+    @content;
+  }
+}
+
 .first_site_background {
   background-color: $color_background;
+  width: 100%;
 }
 
 .site_container {
   width: 80%;
   margin: 0 auto;
+  @include mobile {
+    width: 95%;
+  }
 }
 
 header {
@@ -12,11 +34,17 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 50px 0;
+  @include mobile {
+    justify-content: center;
+  }
 }
 
 .logo_container {
   display: flex;
   align-items: center;
+  @include mobile {
+    flex-direction: column;
+  }
 }
 
 .logo {
@@ -29,12 +57,12 @@ header {
   padding: 0.25em 0.2em 0.25em 0.2em;
   width: 2.7em;
   border-radius: 6px;
+  margin: 10px;
 }
 
 .logo_text {
   font-family: $font_opensans;
   font-weight: 800;
-  line-height: 4.5em;
   letter-spacing: 0.025em;
   font-size: 0.9em;
   color: $color_menu;
@@ -54,4 +82,10 @@ header {
 .main_menu a:focus {
   background-color: #444444;
   color: white;
+}
+
+.main_menu {
+  @include mobile {
+    display: none;
+  }
 }

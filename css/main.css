@@ -56,11 +56,17 @@ table {
 
 .first_site_background {
   background-color: #E4E4E4;
+  width: 100%;
 }
 
 .site_container {
   width: 80%;
   margin: 0 auto;
+}
+@media (max-width: 728px) {
+  .site_container {
+    width: 95%;
+  }
 }
 
 header {
@@ -69,10 +75,20 @@ header {
   justify-content: space-between;
   padding: 50px 0;
 }
+@media (max-width: 728px) {
+  header {
+    justify-content: center;
+  }
+}
 
 .logo_container {
   display: flex;
   align-items: center;
+}
+@media (max-width: 728px) {
+  .logo_container {
+    flex-direction: column;
+  }
 }
 
 .logo {
@@ -85,12 +101,12 @@ header {
   padding: 0.25em 0.2em 0.25em 0.2em;
   width: 2.7em;
   border-radius: 6px;
+  margin: 10px;
 }
 
 .logo_text {
   font-family: "Open Sans";
   font-weight: 800;
-  line-height: 4.5em;
   letter-spacing: 0.025em;
   font-size: 0.9em;
   color: #696969;
@@ -112,18 +128,37 @@ header {
   color: white;
 }
 
+@media (max-width: 728px) {
+  .main_menu {
+    display: none;
+  }
+}
+
 main {
   background-color: white;
   width: 100%;
   border-radius: 6px;
   display: flex;
 }
+@media (max-width: 728px) {
+  main {
+    display: block;
+  }
+}
 
 .main_left_container {
-  padding: 50px 50px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 50%;
+  padding: 20px;
+}
+@media (max-width: 728px) {
+  .main_left_container {
+    width: 100%;
+    align-items: center;
+    padding: 20px 0;
+  }
 }
 .main_left_container h2 {
   font-size: 3.5em;
@@ -131,12 +166,14 @@ main {
   color: #444444;
   font-family: "Open Sans";
   margin-bottom: 20px;
+  text-align: center;
 }
 .main_left_container h3 {
   font-size: 2.75em;
   line-height: 1.35em;
   font-family: "Open Sans";
   color: #696969;
+  text-align: center;
 }
 
 .main_right_container {
@@ -145,6 +182,11 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 728px) {
+  .main_right_container {
+    width: 100%;
+  }
 }
 
 .main_buttons {

@@ -1,21 +1,50 @@
+@mixin mobile {
+  @media (max-width: 728px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 728px) and (max-width: 984px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 984px) {
+    @content;
+  }
+}
+
 main {
   background-color: white;
   width: 100%;
   border-radius: 6px;
   display: flex;
+  @include mobile{
+    display: block;
+  }
 }
 
 .main_left_container {
-  padding: 50px 50px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 50%;
+  padding: 20px;
+
+  @include mobile {
+    width: 100%;
+    align-items: center;
+    padding: 20px 0;
+  }
   h2 {
     font-size: 3.5em;
     font-weight: 800;
     color: $color_text;
     font-family: $font_opensans;
     margin-bottom: 20px;
+    text-align: center;
 
   }
   h3 {
@@ -23,6 +52,7 @@ main {
     line-height: 1.35em;
     font-family: $font_opensans;
     color: $color-menu;
+    text-align: center;
   }
 }
 
@@ -32,6 +62,9 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .main_buttons {
