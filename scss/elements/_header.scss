@@ -1,0 +1,57 @@
+.first_site_background {
+  background-color: $color_background;
+}
+
+.site_container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  text-align: center;
+  font-family: $font_oleo ;
+  font-size: 3.25em;
+  color: white;
+  background-color: $color-secondary;
+  letter-spacing: 0.05em;
+  padding: 0.25em 0.2em 0.25em 0.2em;
+  width: 2.7em;
+  border-radius: 6px;
+}
+
+.logo_text {
+  font-family: $font_opensans;
+  font-weight: 800;
+  line-height: 4.5em;
+  letter-spacing: 0.025em;
+  font-size: 0.9em;
+  color: $color_menu;
+  padding: 0 20px;
+}
+
+.main_menu a {
+  text-decoration: none;
+  color: $color_menu;
+  font-family: $font_opensans;
+  padding: 7px 14px;
+  font-weight: 800;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+.main_menu a:focus {
+  background-color: #444444;
+  color: white;
+}

@@ -1,0 +1,53 @@
+main {
+  background-color: white;
+  width: 100%;
+  border-radius: 6px;
+  display: flex;
+}
+
+.main_left_container {
+  padding: 50px 50px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  h2 {
+    font-size: 3.5em;
+    font-weight: 800;
+    color: $color_text;
+    font-family: $font_opensans;
+    margin-bottom: 20px;
+
+  }
+  h3 {
+    font-size: 2.75em;
+    line-height: 1.35em;
+    font-family: $font_opensans;
+    color: $color-menu;
+  }
+}
+
+.main_right_container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_buttons {
+  background-color: $color-primary;
+  font-size: 33px;
+  color: white;
+  font-family: $font_opensans;
+  font-weight: 800;
+  border-radius: 6px;
+  padding: 24px 30px;
+  border: none;
+  width: 70%;
+}
+
+.main_buttons:last-child {
+  margin-top: 20px;
+  background-color: $color_background;
+  color: $color-text;
+}

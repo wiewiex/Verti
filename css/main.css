@@ -3,8 +3,20 @@
    License: none (public domain)
 */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script&family=Open+Sans:ital,wght@0,300;0,400;0,800;1,400;1,800&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -14,7 +26,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -30,11 +43,7 @@ blockquote, q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
+blockquote:before, blockquote:after,
 q:before, q:after {
   content: "";
   content: none;
@@ -45,9 +54,114 @@ table {
   border-spacing: 0;
 }
 
-div {
+.first_site_background {
+  background-color: #E4E4E4;
+}
+
+.site_container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  text-align: center;
+  font-family: "Oleo Script";
+  font-size: 3.25em;
+  color: white;
+  background-color: #FC4887;
+  letter-spacing: 0.05em;
+  padding: 0.25em 0.2em 0.25em 0.2em;
+  width: 2.7em;
+  border-radius: 6px;
+}
+
+.logo_text {
+  font-family: "Open Sans";
+  font-weight: 800;
+  line-height: 4.5em;
+  letter-spacing: 0.025em;
+  font-size: 0.9em;
+  color: #696969;
+  padding: 0 20px;
+}
+
+.main_menu a {
+  text-decoration: none;
+  color: #696969;
+  font-family: "Open Sans";
+  padding: 7px 14px;
+  font-weight: 800;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+.main_menu a:focus {
+  background-color: #444444;
+  color: white;
+}
+
+main {
+  background-color: white;
   width: 100%;
-  height: 300px;
-  background-color: black;
+  border-radius: 6px;
+  display: flex;
+}
+
+.main_left_container {
+  padding: 50px 50px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.main_left_container h2 {
+  font-size: 3.5em;
+  font-weight: 800;
+  color: #444444;
+  font-family: "Open Sans";
+  margin-bottom: 20px;
+}
+.main_left_container h3 {
+  font-size: 2.75em;
+  line-height: 1.35em;
+  font-family: "Open Sans";
+  color: #696969;
+}
+
+.main_right_container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_buttons {
+  background-color: #1691C3;
+  font-size: 33px;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: 800;
+  border-radius: 6px;
+  padding: 24px 30px;
+  border: none;
+  width: 70%;
+}
+
+.main_buttons:last-child {
+  margin-top: 20px;
+  background-color: #E4E4E4;
+  color: #444444;
 }
 /*# sourceMappingURL=main.css.map */
